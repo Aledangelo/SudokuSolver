@@ -11,3 +11,6 @@ Solving the game means finding the only feasible solution (if any)
 
 ## Input Matrix
 First I create a matrix in file .dat where I put a zero in correspondence of an empty box, and in the non-empty boxes I put the numbers. 
+
+## Installation
+* pip3 install -r requirements.txt
