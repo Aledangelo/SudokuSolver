@@ -10,4 +10,4 @@ Sudoku is a logic game where you want to insert the numbers from 1 to 9 in a 9x9
 Solving the game means finding the only feasible solution (if any)
 
 ## Input Matrix
-First I create a matrix where I put a zero in correspondence of an empty box, and in the non-empty boxes I put the numbers of the image above
+First I create a matrix where I put a zero in correspondence of an empty box, and in the non-empty boxes I put the numbers
