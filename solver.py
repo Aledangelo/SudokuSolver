@@ -39,9 +39,9 @@ def main():
                 k = int(matrix[i, j]) - 1
                 xvar[i, j, k].LB = 1
 
-    mod.addConstrs((xvar.sum(i, j, '*') == 1 for i in range(9) for j in range(9)), name="Cell")
-    mod.addConstrs((xvar.sum(i, '*', k) == 1 for i in range(9) for k in range(9)), name="Row")
-    mod.addConstrs((xvar.sum('*', j, k) == 1 for j in range(9) for k in range(9)), name="Col")
+    mod.addConstrs((xvar.sum(i, j, '*') == 1 for i in range(int(row)) for j in range(int(col))), name="Cell")
+    mod.addConstrs((xvar.sum(i, '*', k) == 1 for i in range(int(row)) for k in range(9)), name="Row")
+    mod.addConstrs((xvar.sum('*', j, k) == 1 for j in range(int(col)) for k in range(9)), name="Col")
     mod.addConstrs((gp.quicksum(vars[i, j, k] for i in range(i0 * 3, (i0 + 1) * 3)
                                 for j in range(j0 * 3, (j0 + 1) * 3)) == 1
                     for k in range(9)
